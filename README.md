@@ -8,7 +8,28 @@ This module allows importing customers and their addresses from CSV and JSON fil
 - PHP 8.3
 - Composer 2.7.1
 
-## steps
+
+## Credit and contact
+ubedullah Bennishirur
+88929504**
+ubedullahbenni@gmail.com
+
+
+## Additinal steps.
+
+1.Add repositories as below in root composer.json file
+"repositories": [
+       {
+           "type": "vcs",
+           "url": "https://github.com/ubenn/customer-import.git"
+       }
+   ],
+
+2.run 
+composer require vml/customer-import:dev-main
+
+3.finaly 
+
 php bin/magento module:enable VML_CustomerImport
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
@@ -16,10 +37,6 @@ php bin/magento cache:clean
 
 php bin/magento customer:import sample-csv /var/www/html/sample.csv
 php bin/magento customer:import sample-json /var/www/html/sample.json
-
-## Credit and contact
-ubedullah Bennishirur
-8892950474
 
 
 

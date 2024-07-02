@@ -1,0 +1,25 @@
+{
+    "name": "vml/customer-import",
+    "description": "Magento 2 module to import customer details via CLI Console.",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "ubedullah bennishirur",
+            "email": "ubedullahbenni@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.3",
+        "magento/framework": "^103.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "VML\\CustomerImport\\": ""
+        }
+    }
+}

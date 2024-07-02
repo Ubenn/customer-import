@@ -1,0 +1,23 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+   <type name="Magento\Framework\Console\CommandListInterface">
+       <arguments>
+           <argument name="commands" xsi:type="array">
+               <item name="exampleCommandLine" xsi:type="object">VML\CustomerImport\Console\Command\ImportCustomerCommand</item>
+           </argument>
+       </arguments>
+   </type>
+   
+    <type name="VML\CustomerImport\Console\Command\ImportCustomerCommand">
+        <arguments>
+            <argument name="importerFactory" xsi:type="object">VML\CustomerImport\Model\Import\ImporterFactory</argument>
+        </arguments>
+    </type>
+    <type name="VML\CustomerImport\Model\Import\ImporterFactory">
+        <arguments>
+            <argument name="importers" xsi:type="array">
+                <item name="sample-csv" xsi:type="object">VML\CustomerImport\Model\Import\CsvImporter</item>
+                <item name="sample-json" xsi:type="object">VML\CustomerImport\Model\Import\JsonImporter</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

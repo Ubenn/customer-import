@@ -18,18 +18,21 @@ ubedullahbenni@gmail.com
 ## Additinal steps.
 
 1.Add repositories as below in root composer.json file
+<pre>
 "repositories": [
        {
            "type": "vcs",
            "url": "https://github.com/ubenn/customer-import.git"
        }
    ],
+   </pre>
 
 2.run 
 composer require vml/customer-import:dev-main
 
 3.finaly 
 
+<pre>
 php bin/magento module:enable VML_CustomerImport
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
@@ -38,7 +41,7 @@ php bin/magento cache:clean
 php bin/magento customer:import sample-csv /var/www/html/sample.csv
 php bin/magento customer:import sample-json /var/www/html/sample.json
 
-
+</pre>
 
 
 
